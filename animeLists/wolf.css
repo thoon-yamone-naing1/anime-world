@@ -1,0 +1,74 @@
+/* BLURRED PAGE BACKGROUND */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: url("../animePhoto/lists/wolf/bg01.jpg")
+        center / cover no-repeat;
+    filter: blur(25px);
+    transform: scale(1.15);
+    z-index: -1;
+}
+
+/* ================= HERO ================= */
+.hero {
+    position: relative;
+    height: 90vh;
+    background: url("../animePhoto/lists/wolf/bg01.jpg")
+        center / cover no-repeat;
+    overflow: hidden;
+    padding: 40px;
+    /* Smooth Bottom Fade */
+    -webkit-mask-image: linear-gradient(to bottom, black 75%, transparent 100%);
+    mask-image: linear-gradient(to bottom, black 75%, transparent 100%);
+}
+
+/* Wolf Children - Genre Badges */
+
+/* Drama - Deep Forest Green */
+.drama {
+    background: rgba(45, 90, 39, 0.15);
+    color: #a8e0a4;
+    border: 1px solid rgba(168, 224, 164, 0.4);
+}
+
+.drama:hover {
+    background: rgba(45, 90, 39, 0.4);
+    color: #ffffff;
+    box-shadow: 0 0 15px rgba(45, 90, 39, 0.6);
+}
+
+/* Fantasy - Moonlight Silver */
+.fantasy {
+    background: rgba(209, 204, 192, 0.1);
+    color: #d1ccc0;
+    border: 1px solid rgba(209, 204, 192, 0.3);
+}
+
+.fantasy:hover {
+    background: rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.8);
+}
+
+/* Slice of Life - Wildflower Petal */
+.slice-of-life {
+    background: rgba(247, 183, 49, 0.1);
+    color: #f7b731;
+    border: 1px solid rgba(247, 183, 49, 0.3);
+}
+
+.slice-of-life:hover {
+    background: rgba(247, 183, 49, 0.3);
+    color: #fff;
+    box-shadow: 0 0 15px rgba(247, 183, 49, 0.5);
+}
+
+/* Special "Howl" Animation for the Quote */
+.quote-hover:hover {
+    letter-spacing: 3px;
+    color: #d1ccc0;
+    transition: all 0.8s ease;
+    text-shadow: 0 0 10px rgba(209, 204, 192, 0.5);
+}

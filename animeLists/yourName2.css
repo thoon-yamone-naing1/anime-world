@@ -1,0 +1,93 @@
+
+
+/* BLURRED PAGE BACKGROUND */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: url("../animePhoto/lists/yourName/yourNameBg03.jpg")
+        center / cover no-repeat;
+    filter: blur(25px);
+    transform: scale(1.15);
+    z-index: -1;
+}
+
+/* ================= HERO ================= */
+.hero {
+    position: relative;
+    height: 90vh;
+    background: url("../animePhoto/lists/yourName/yourNameBg02.jpg")
+        center / cover no-repeat;
+    overflow: hidden;
+    padding: 40px;
+    /* Smooth Bottom Fade */
+    -webkit-mask-image: linear-gradient(to bottom, black 75%, transparent 100%);
+    mask-image: linear-gradient(to bottom, black 75%, transparent 100%);
+}
+
+
+
+
+
+/* Specific Genre Colors */
+.romance {
+    background: rgba(255, 79, 216, 0.15);
+    color: #ff66d8;
+    border-color: rgba(255, 79, 216, 0.5);
+}
+
+.fantasy {
+    background: rgba(100, 149, 237, 0.15);
+    color: #87cefa;
+    border-color: rgba(100, 149, 237, 0.5);
+}
+
+.drama {
+    background: rgba(255, 165, 0, 0.15);
+    color: #ffb347;
+    border-color: rgba(255, 165, 0, 0.5);
+}
+
+
+
+/* Romance Hover (Pink Glow) */
+.romance:hover {
+    background: rgba(255, 79, 216, 0.3);
+    box-shadow: 0 0 15px rgba(255, 79, 216, 0.4);
+    transform: translateY(-2px);
+}
+
+/* Fantasy Hover (Blue Glow) */
+.fantasy:hover {
+    background: rgba(100, 149, 237, 0.3);
+    box-shadow: 0 0 15px rgba(100, 149, 237, 0.4);
+    transform: translateY(-2px);
+}
+
+/* Drama Hover (Orange Glow) */
+.drama:hover {
+    background: rgba(255, 165, 0, 0.3);
+    box-shadow: 0 0 15px rgba(255, 165, 0, 0.4);
+    transform: translateY(-2px);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

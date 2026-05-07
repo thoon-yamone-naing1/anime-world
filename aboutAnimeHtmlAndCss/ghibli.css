@@ -1,0 +1,585 @@
+:root {
+    --accent: #ff4fd8;
+    --secondary: #9b5cff;
+    --bg: #000000;
+    --card-bg: #0a0a0a;
+    --border: #222;
+}
+
+body {
+    background-color: var(--bg);
+    color: #fff;
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+}
+
+/* Header & Branding */
+.studio-branding {
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid var(--border);
+}
+
+.main-logo-dark {
+    width: 450px;
+    max-width: 85%;
+    filter: invert(1);
+    opacity: 0.9;
+}
+
+.glow-line {
+    width: 100px;
+    height: 2px;
+    background: linear-gradient(90deg, var(--accent), var(--secondary));
+    margin-top: 40px;
+    box-shadow: 0 0 15px var(--accent);
+}
+
+/* Layout */
+.pro-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 80px 20px;
+}
+
+.pro-section {
+    margin-bottom: 120px;
+}
+
+
+
+
+
+
+
+/* --- POSTER ANALYSIS STYLES --- */
+.poster-analysis {
+    background: linear-gradient(to bottom, #0a0a0a, #050505);
+    padding-bottom: 100px;
+}
+
+.analysis-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin: 30px 0;
+}
+
+.analysis-card {
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px solid #222;
+    transition: 0.3s ease;
+}
+
+/* Visual cues for the cards */
+.analysis-card.dark {
+    background: rgba(0, 0, 0, 0.6);
+    border-left: 4px solid #444;
+}
+
+.analysis-card.bright {
+    background: rgba(255, 255, 255, 0.05);
+    border-left: 4px solid var(--accent);
+}
+
+.analysis-card h4 {
+    margin-top: 0;
+    color: var(--accent);
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.analysis-card p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: #bbb;
+    margin-bottom: 0;
+}
+
+.analysis-quote {
+    border-left: 2px solid var(--accent);
+    padding-left: 20px;
+    font-style: italic;
+    color: #888;
+    margin: 40px 0;
+    font-size: 1.1rem;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+    .analysis-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* --- POSTER REVEAL STYLING --- */
+.poster-reveal-wrapper {
+    position: relative;
+    margin-top: 30px;
+    border-radius: 15px;
+    overflow: hidden;
+    background: #000;
+    border: 1px solid #333;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+    cursor: crosshair;
+}
+
+.reveal-img {
+    width: 100%;
+    display: block;
+    /* This forces the 'Dark' look by default */
+    filter: brightness(0.85) contrast(1.1);
+    transition: filter 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* INTERACTIVE: When user hovers, the image 'brightens' to reveal the truth */
+.poster-reveal-wrapper:hover .reveal-img {
+    filter: brightness(1.4) contrast(1);
+}
+
+.reveal-overlay {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(255, 79, 216, 0.2);
+    backdrop-filter: blur(5px);
+    color: #fff;
+    padding: 6px 15px;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border: 1px solid rgba(255, 79, 216, 0.3);
+    border-radius: 30px;
+    pointer-events: none;
+    transition: 0.3s;
+}
+
+.poster-reveal-wrapper:hover .reveal-overlay {
+    opacity: 0;
+}
+
+
+
+.label {
+    font-size: 0.8rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: var(--accent);
+    margin-bottom: 40px;
+}
+
+.split-content {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 60px;
+}
+
+.pink-text {
+    font-size: 3.5rem;
+    font-weight: 600;
+    line-height: 1;
+    background: linear-gradient(var(--accent), var(--secondary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Text & Intro Styling */
+.intro-block p {
+    margin-bottom: 25px;
+    line-height: 1.8;
+    color: #aaa;
+}
+
+.highlight-text {
+    font-size: 1.25rem;
+    color: #fff !important;
+    border-left: 2px solid var(--accent);
+    padding-left: 20px;
+}
+
+/* List Styling */
+.bullet-list {
+    list-style: none;
+    padding: 0;
+}
+
+.bullet-list li {
+    padding: 15px 0;
+    border-bottom: 1px solid #111;
+    color: #ccc;
+    line-height: 1.6;
+}
+
+.bullet-list strong {
+    color: #fff;
+}
+
+/* Focus Box / Fireflies */
+.focus-box-dark {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    padding: 50px;
+    border-radius: 20px;
+}
+
+.secondary-text {
+    color: var(--secondary);
+    font-size: 2rem;
+    margin: 0;
+}
+
+.subtitle {
+    color: #666;
+    margin-bottom: 40px;
+}
+
+.info-grid-compact {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.info-card h4 {
+    color: var(--accent);
+    margin-bottom: 15px;
+}
+
+.info-card p {
+    font-size: 0.9rem;
+    color: #999;
+    line-height: 1.6;
+}
+
+/* No Cuts Grid */
+.comparison-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.comp-box {
+    padding: 30px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+}
+
+.comp-box.bad {
+    border-top: 4px solid #ff4f4f;
+}
+
+.comp-box.good {
+    border-top: 4px solid #4fff8d;
+}
+
+
+/* Timeline Styling */
+.timeline-container {
+  border-left: 1px solid var(--border);
+  padding-left: 40px;
+  margin-left: 20px;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 80px;
+}
+
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  left: -46px;
+  top: 0;
+  width: 10px;
+  height: 10px;
+  background: var(--accent);
+  border-radius: 50%;
+  box-shadow: 0 0 10px var(--accent);
+}
+
+.time-marker {
+  font-family: monospace;
+  font-size: 0.9rem;
+  color: var(--accent);
+  margin-bottom: 10px;
+  letter-spacing: 2px;
+}
+
+.time-content {
+  background: rgba(255, 255, 255, 0.02);
+  padding: 30px;
+  border-radius: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.highlight-era .time-content {
+  border: 1px solid var(--secondary);
+  background: linear-gradient(145deg, rgba(155, 92, 255, 0.05), transparent);
+}
+
+/* Responsive adjustment for timeline */
+@media (max-width: 768px) {
+  .timeline-container {
+    padding-left: 20px;
+  }
+  .timeline-item::before {
+    left: -26px;
+  }
+}
+
+
+/* Artistic & Music Grid */
+.artistic-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 30px;
+  align-items: start;
+}
+
+.style-card {
+  padding: 40px !important;
+}
+
+.theme-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 30px;
+}
+
+.tag {
+  background: rgba(255, 79, 216, 0.1);
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.music-block {
+  background: #080808;
+  border-left: 2px solid var(--secondary);
+  padding: 40px;
+  height: 100%;
+}
+
+.music-block p {
+  color: #999;
+  line-height: 1.8;
+  font-size: 0.95rem;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .artistic-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* Film Archive Grid Links */
+.film-archive-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  margin-top: 50px;
+  border-top: 1px solid var(--border);
+  padding-top: 40px;
+}
+
+.film-item {
+  display: block; /* Important for links */
+  padding: 12px 0;
+  border-bottom: 1px solid #111;
+  font-size: 0.95rem;
+  color: #ccc;
+  text-decoration: none; /* Removes underline */
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.film-item span {
+  font-family: monospace;
+  font-size: 0.75rem;
+  color: var(--secondary);
+  margin-right: 15px;
+  font-weight: 800;
+}
+
+.film-item:hover {
+  color: var(--accent);
+  padding-left: 15px;
+  background: rgba(255, 79, 216, 0.05);
+  border-bottom-color: var(--accent);
+}
+
+
+/* Oscar Award Styling */
+.award-winner {
+  position: relative;
+  border-left: 2px solid #ffd700; /* Gold border */
+  padding-left: 10px !important;
+}
+
+.oscar-badge {
+  display: block;
+  font-style: normal;
+  font-size: 0.6rem;
+  color: #ffd700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 4px;
+  font-weight: 700;
+  opacity: 0.8;
+}
+
+.award-winner:hover {
+  background: rgba(255, 215, 0, 0.05) !important;
+  border-bottom-color: #ffd700 !important;
+}
+
+.award-winner:hover .oscar-badge {
+  opacity: 1;
+  transform: translateX(5px);
+  transition: all 0.3s ease;
+}
+
+.highlight-item {
+  color: #fff;
+  font-weight: 700;
+}
+
+.highlight-item:hover {
+    background: linear-gradient(90deg, rgba(255, 79, 216, 0.1), transparent);
+}
+
+.archive-link p {
+  margin-top: 40px;
+  text-align: right;
+  color: #444;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* Mobile responsive archive */
+@media (max-width: 850px) {
+  .film-archive-grid {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+}
+
+
+/* Table Styling */
+.distro-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.distro-table th {
+    text-align: left;
+    color: var(--accent);
+    border-bottom: 1px solid var(--border);
+    padding: 15px;
+}
+
+.distro-table td {
+    padding: 15px;
+    border-bottom: 1px solid #111;
+    color: #ccc;
+}
+
+/* Footer Styling */
+.micro-footer {
+    padding: 60px 20px;
+    text-align: center;
+    border-top: 1px solid var(--border);
+}
+
+.wisteria-name {
+    color: var(--accent);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .split-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .pink-text {
+        font-size: 2.5rem;
+    }
+
+    .comparison-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* 1. Poster Analysis Cards - Subtle Lift & Border Glow */
+.analysis-card {
+    transition: all 0.3s ease;
+    cursor: default;
+    border: 1px solid transparent;
+}
+
+.analysis-card:hover {
+    transform: translateY(-5px);
+    background-color: #2a2a2a; /* Slightly lighter than the dark background */
+    border-color: #ff69b4; /* Pink glow matching your theme */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* 2. Warriors of the Wind vs Modern Policy - Scaling effect */
+.comp-box {
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.comp-box:hover {
+    transform: scale(1.03);
+    z-index: 2;
+}
+
+/* 3. Artistic Theme Tags - Color Shift */
+.tag {
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.tag:hover {
+    background-color: #ff69b4; /* Pink background */
+    color: #fff;
+    transform: rotate(-2deg) scale(1.1);
+}
+
+/* 4. Distribution Table Rows - Highlight */
+.distro-table tbody tr {
+    transition: background-color 0.2s ease;
+}
+
+.distro-table tbody tr:hover {
+    background-color: rgba(255, 105, 180, 0.1); /* Very faint pink tint */
+    cursor: crosshair;
+}
+
+.distro-table td {
+    transition: color 0.2s ease;
+}
+
+.distro-table tr:hover td {
+    color: #ff69b4; /* Text turns pink on hover */
+}
+
+

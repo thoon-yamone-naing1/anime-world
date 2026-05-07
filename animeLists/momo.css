@@ -1,0 +1,109 @@
+/* BLURRED PAGE BACKGROUND */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: url("../animePhoto/lists/momo/momo06.jpg")
+        center / cover no-repeat;
+    filter: blur(25px);
+    transform: scale(1.15);
+    z-index: -1;
+}
+
+/* ================= HERO ================= */
+.hero {
+    position: relative;
+    height: 90vh;
+    background: url("../animePhoto/lists/momo/bg01.jpg")
+        center / cover no-repeat;
+    overflow: hidden;
+    padding: 40px;
+    /* Smooth Bottom Fade */
+    -webkit-mask-image: linear-gradient(to bottom, black 75%, transparent 100%);
+    mask-image: linear-gradient(to bottom, black 75%, transparent 100%);
+}
+
+.back-key{
+    color: black;
+}
+
+
+.meta {
+    margin-top: 6px;
+    opacity: 1; /* Increased from 0.85 to 1 for better visibility */
+    
+    /* This creates a soft dark glow behind the text */
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8), 
+                 0px 0px 10px rgba(0, 0, 0, 0.5);
+    
+    /* Ensures the font stays crisp */
+    font-weight: 400; 
+}
+
+
+/* Specific Genre Colors */
+
+.fantasy {
+    background: rgba(100, 149, 237, 0.15);
+    color: #87cefa;
+    border-color: rgba(100, 149, 237, 0.5);
+}
+
+/* Fantasy Hover (Blue Glow) */
+.fantasy:hover {
+    background: rgba(100, 149, 237, 0.3);
+    box-shadow: 0 0 15px rgba(100, 149, 237, 0.4);
+    transform: translateY(-2px);
+}
+
+
+
+.drama {
+    background: rgba(255, 165, 0, 0.15);
+    color: #ffb347;
+    border-color: rgba(255, 165, 0, 0.5);
+}
+
+
+/* Family Genre Color - Sage/Mint Green */
+.family {
+    background: rgba(46, 204, 113, 0.15); /* Soft green tint */
+    color: #2ecc71; /* Vibrant but friendly green */
+    border-color: rgba(46, 204, 113, 0.5);
+}
+
+/* Family Hover (Green Glow) */
+.family:hover {
+    background: rgba(46, 204, 113, 0.3);
+    box-shadow: 0 0 15px rgba(46, 204, 113, 0.4);
+    transform: translateY(-2px);
+}
+
+
+
+
+/* Drama Hover (Orange Glow) */
+.drama:hover {
+    background: rgba(255, 165, 0, 0.3);
+    box-shadow: 0 0 15px rgba(255, 165, 0, 0.4);
+    transform: translateY(-2px);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

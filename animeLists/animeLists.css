@@ -1,0 +1,267 @@
+:root {
+    --bg: #000000;
+    --card-bg: #0a0a0a;
+    --accent: #ff4fd8;
+    /* Neon Pink */
+    --secondary: #9b5cff;
+    /* Neon Purple */
+    --ghibli-gold: #d4af37;
+    --border: #1a1a1a;
+    --text-dim: #666;
+}
+
+body {
+    background-color: var(--bg);
+    color: #fff;
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    scroll-behavior: smooth;
+}
+
+/* ================= HERO & SLIDER ================= */
+.list-hero {
+    height: 35vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(to bottom, #110511, #000);
+}
+
+.list-hero h1 {
+    font-size: 4rem;
+    font-weight: 900;
+    margin: 0;
+}
+
+.accent-text {
+    background: linear-gradient(to right, #fff, var(--secondary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+
+
+/* ================= MAIN SLIDER ================= */
+/* ================= MAIN SLIDER ================= */
+.slider-container {
+    width: 90%;
+    margin: -40px auto 40px;
+    overflow: hidden; 
+    border-radius: 15px;
+    background: #0d0d0d;
+}
+
+.slider-track {
+    display: flex;
+    /* Width = (Slide Width 450px + padding) * Total Number of Slides (10) */
+    width: calc(470px * 10); 
+    animation: scroll 25s linear infinite;
+}
+
+.slide {
+    width: 450px; 
+    height: 250px;
+    flex-shrink: 0;
+    padding: 0 10px; 
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* ================= ANIMATION ================= */
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        /* Move by exactly 5 slides (the original set width) */
+        /* 450px width + 20px total padding per slide = 470px */
+        transform: translateX(calc(-470px * 5)); 
+    }
+}
+
+
+
+
+/* ================= A-Z NAVIGATION ================= */
+.az-nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding: 20px 0;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 30px;
+}
+
+.az-nav a {
+    color: var(--text-dim);
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.85rem;
+    transition: 0.3s;
+}
+
+.az-nav a:hover {
+    color: var(--accent);
+}
+
+/* ================= THE 7-COLUMN GRID ================= */
+.list-container {
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 0 20px 60px;
+}
+
+/* ================= THE 6-COLUMN GRID ================= */
+.anime-grid {
+    display: grid;
+    /* Change 7 to 6 here */
+    grid-template-columns: repeat(6, 1fr);
+    gap: 20px;
+    /* Increased gap slightly for better breathing room */
+}
+
+
+
+
+
+/* ================= ANIME CARD ================= */
+.anime-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+    transition: 0.3s ease;
+}
+
+.anime-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--secondary);
+    box-shadow: 0 5px 15px rgba(155, 92, 255, 0.2);
+}
+
+.anime-img {
+    /* Since cards are wider in a 6-col layout, 
+       we increase height to keep the poster aspect ratio */
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+    background-color: #111;
+}
+
+.anime-info {
+    padding: 10px;
+}
+
+.anime-name {
+    display: block;
+    font-size: 0.8rem;
+    font-weight: 700;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.genre-role {
+    font-size: 0.65rem;
+    color: var(--text-dim);
+    margin: 4px 0 8px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.meta {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.65rem;
+    color: #888;
+}
+
+/* ================= NEON TAGS ================= */
+.tag {
+    font-size: 0.6rem;
+    padding: 2px 5px;
+    border-radius: 3px;
+    font-weight: bold;
+}
+
+.tag.movie {
+    background: rgba(255, 79, 216, 0.1);
+    color: var(--accent);
+}
+
+.tag.series {
+    background: rgba(155, 92, 255, 0.1);
+    color: var(--secondary);
+}
+
+.tag.ghibli {
+    background: rgba(212, 175, 55, 0.1);
+    color: var(--ghibli-gold);
+}
+
+/* ================= RESPONSIVE ================= */
+/* Update Responsive Breakpoints for 6-column flow */
+@media (max-width: 1400px) {
+    .anime-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (max-width: 900px) {
+    .anime-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .anime-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+/* Container must be relative for the badge to stick to it */
+.premium-card {
+    position: relative;
+    cursor: default;
+}
+
+/* Make the image look "locked" */
+.premium-card .anime-img {
+    filter: brightness(0.6) saturate(0.8);
+}
+
+/* The Gold Badge Style */
+.premium-badge {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    background: linear-gradient(135deg, #ffd700, #b8860b);
+    color: #000;
+    padding: 3px 10px;
+    border-radius: 4px;
+    font-size: 0.7rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+    z-index: 5;
+}
+
+/* Optional: Add a subtle glow on hover */
+.premium-card:hover {
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.3);
+    transform: translateY(-2px);
+    transition: all 0.3s ease;
+}

@@ -1,0 +1,63 @@
+/* BLURRED PAGE BACKGROUND */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: url("../animePhoto/lists/ghibli/graveFireFlies/bg01.jpg")
+        center / cover no-repeat;
+    filter: blur(25px);
+    transform: scale(1.15);
+    z-index: -1;
+}
+
+/* ================= HERO ================= */
+.hero {
+    position: relative;
+    height: 90vh;
+    background: url("../animePhoto/lists/ghibli/graveFireFlies/bg03.jpg")
+        center / cover no-repeat;
+    overflow: hidden;
+    padding: 40px;
+    /* Smooth Bottom Fade */
+    -webkit-mask-image: linear-gradient(to bottom, black 75%, transparent 100%);
+    mask-image: linear-gradient(to bottom, black 75%, transparent 100%);
+}
+
+.drama {
+    background: rgba(255, 165, 0, 0.15);
+    color: #ffb347;
+    border-color: rgba(255, 165, 0, 0.5);
+}
+
+/* Drama Hover (Orange Glow) */
+.drama:hover {
+    background: rgba(255, 165, 0, 0.3);
+    box-shadow: 0 0 15px rgba(255, 165, 0, 0.4);
+    transform: translateY(-2px);
+}
+
+/* War - Ash & Smoke Grey */
+.war {
+    background: rgba(83, 92, 104, 0.2);
+    color: #95afc0;
+    border-color: rgba(149, 175, 192, 0.4);
+}
+
+.war:hover {
+    background: rgba(83, 92, 104, 0.4);
+    color: #dff9fb;
+    box-shadow: 0 0 15px rgba(83, 92, 104, 0.5);
+}
+
+/* Tragedy - Deep Heartbreak Red */
+.tragedy {
+    background: rgba(192, 57, 43, 0.15);
+    color: #e74c3c;
+    border-color: rgba(192, 57, 43, 0.4);
+}
+
+.tragedy:hover {
+    background: rgba(192, 57, 43, 0.3);
+    color: #ff7675;
+    box-shadow: 0 0 20px rgba(192, 57, 43, 0.4);
+}

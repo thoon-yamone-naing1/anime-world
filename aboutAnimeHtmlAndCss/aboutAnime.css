@@ -1,0 +1,843 @@
+:root {
+    --accent: #ff4fd8;
+    --secondary: #9b5cff;
+    --bg-dark: #050505;
+    --card-bg: #111;
+    --text-gray: #a0a0a0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--bg-dark);
+    color: #fff;
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    line-height: 1.6;
+}
+
+/* HERO SECTION */
+.hero {
+    height: 90vh;
+    background: url('https://images.alphacoders.com/132/1327170.png') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.hero-overlay {
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.4));
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
+}
+
+.badge {
+    background: rgba(255, 79, 216, 0.15);
+    color: var(--accent);
+    padding: 6px 16px;
+    border-radius: 50px;
+    border: 1px solid var(--accent);
+    margin-bottom: 20px;
+    display: inline-block;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.hero-content h1 {
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    margin: 10px 0;
+    background: linear-gradient(90deg, #fff, var(--secondary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero-content p {
+    max-width: 600px;
+    color: var(--text-gray);
+    font-size: 1.1rem;
+}
+
+.hero-stats {
+    display: flex;
+    gap: 40px;
+    margin: 30px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 20px;
+}
+
+.stat-item strong {
+    display: block;
+    font-size: 1.5rem;
+    color: #fff;
+}
+
+.stat-item span {
+    font-size: 0.7rem;
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* BUTTONS */
+.cta-btn {
+    padding: 14px 35px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    background: var(--accent);
+    color: white;
+    transition: 0.3s;
+    display: inline-block;
+}
+
+.cta-btn.secondary {
+    background: transparent;
+    border: 1px solid #fff;
+    margin-left: 10px;
+}
+
+.cta-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(255, 79, 216, 0.3);
+}
+
+/* MAIN CONTAINER & GRIDS */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 100px 20px;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+    margin-bottom: 120px;
+}
+
+.reverse {
+    direction: rtl;
+}
+
+.reverse .text-box {
+    direction: ltr;
+}
+
+.image-box {
+    position: relative; /* Added for caption positioning */
+}
+
+.image-box img {
+    width: 100%;
+    border-radius: 20px;
+    border: 1px solid #222;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+}
+
+.tag {
+    color: var(--secondary);
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+}
+
+.text-box h2 {
+    font-size: 2.5rem;
+    margin: 15px 0;
+    color: #fff;
+}
+
+
+/* ==========================================================
+   FINAL MASTER GRADIENT & CENTERING FIX
+   ========================================================== */
+
+/* This targets EVERY big title: What is Anime?, Where did it come from?, 
+   Why does it matter?, Not Just Cartoons, Cultural Phenomenon, 
+   Essential Entry List, and Genre Guide */
+
+.text-box h2, 
+.section-title h2,
+.hero-content h1,
+.footer-logo{
+    background: linear-gradient(90deg, #fff 10%, var(--secondary) 50%, var(--accent) 90%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    
+    /* Formatting to ensure it behaves like a block but stays centered */
+    display: table; 
+    font-weight: 900;
+    width: fit-content;
+}
+
+/* 1. LEFT-ALIGNED TITLES (The ones inside the text-boxes) */
+/* Targets: What is Anime?, Where did it come from?, A Cultural Phenomenon */
+.text-box h2 {
+    margin: 10px 0 20px 0; /* Aligns to left */
+    text-align: left;
+}
+
+/* 2. CENTERED TITLES (The ones in full-width sections) */
+/* Targets: Why does it matter?, Not Just Cartoons, Entry List, Genre Guide */
+.section-title h2 {
+    margin: 10px auto 20px auto; /* THE FIX: Centers them */
+    text-align: center;
+}
+
+/* 3. LOGO FIX (Nav and Footer) */
+.footer-logo{
+    margin: 0 auto;
+    display: inline-block;
+}
+
+
+/* --- ORIGINS & SIGNIFICANCE STYLES --- */
+.origins-significance {
+    margin-top: 50px;
+    padding-bottom: 100px;
+}
+
+.why-it-matters {
+    background: linear-gradient(135deg, rgba(155, 92, 255, 0.05) 0%, rgba(255, 79, 216, 0.05) 100%);
+    padding: 60px 40px;
+    border-radius: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    margin-top: 60px;
+}
+
+.importance-flex {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.importance-item {
+    flex: 1;
+    min-width: 250px;
+    padding: 20px;
+    border-left: 2px solid var(--secondary);
+    background: rgba(0, 0, 0, 0.2);
+    transition: 0.3s ease;
+}
+
+.importance-item:hover {
+    border-left-color: var(--accent);
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.importance-item h3 {
+    color: var(--accent);
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.importance-item p {
+    font-size: 0.9rem;
+    color: var(--text-gray);
+    line-height: 1.6;
+}
+
+/* Responsive adjustment for the flex items */
+@media (max-width: 768px) {
+    .importance-flex {
+        flex-direction: column;
+    }
+}
+
+
+/* --- SECTION SPACING FIX --- */
+
+/* This targets the "Where did it come from?" area */
+.origins-significance {
+    margin-top: 150px !important; /* Forces the gap from the Definition section */
+    padding-top: 50px;
+    position: relative;
+}
+
+/* Optional: Add a subtle 'Pro' divider line between Definition and Origins */
+.origins-significance::before {
+    content: '';
+    position: absolute;
+    top: -75px; /* Centers the line in the gap */
+    left: 10%;
+    width: 80%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+}
+
+/* Ensure the Definition section doesn't feel cramped at the bottom */
+#definition {
+    margin-bottom: 0;
+}
+
+
+/* --- ANIME VS CARTOON SECTION --- */
+.vs-section {
+    padding: 80px 0;
+    background: linear-gradient(180deg, var(--bg-dark) 0%, #0a0a0a 100%);
+    margin-bottom: 100px;
+}
+
+.comparison-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.vs-card {
+    background: rgba(255, 255, 255, 0.03);
+    padding: 40px;
+    border-radius: 20px;
+    border: 1px solid rgba(155, 92, 255, 0.1);
+    transition: all 0.4s ease;
+    text-align: center;
+}
+
+.vs-card:hover {
+    background: rgba(155, 92, 255, 0.05);
+    border-color: var(--accent);
+    transform: translateY(-10px);
+}
+
+.vs-icon {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    display: block;
+}
+
+.vs-card h3 {
+    color: #fff;
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+}
+
+.vs-card p {
+    color: var(--text-gray);
+    font-size: 0.95rem;
+    line-height: 1.7;
+}
+
+/* Add a highlight effect to the "Not Just Cartoons" title */
+.vs-section .section-title h2 {
+    background: linear-gradient(90deg, #fff, var(--accent));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+/* --- AWARDS SECTION STYLES --- */
+/* --- SPACING FIX --- */
+
+.awards-section {
+    padding: 100px 0;
+    background: linear-gradient(180deg, var(--bg-dark), #0a0510);
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    
+    /* ADD THIS: Space outside the section to push the next one down */
+    margin-bottom: 80px; 
+}
+
+.impact-section {
+    /* Ensure there is enough internal space at the top of the next section */
+    padding-top: 100px;
+    position: relative;
+}
+
+/* Optional: Add a subtle horizontal divider line between them */
+.awards-section::after {
+    content: '';
+    display: block;
+    width: 60%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--secondary), transparent);
+    margin: 80px auto 0; /* Centers the line and adds more breathing room */
+    opacity: 0.3;
+}
+
+.awards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 80px 35px;    /* INCREASED GAP: 50px creates the vertical and horizontal space you requested */
+    margin-top: 60px;
+}
+
+/* Vertical Card Layout */
+.award-card {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 28px;
+    padding: 20px; /* Reduced from 30px for a tighter look */
+    display: flex;
+    flex-direction: column;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    
+    /* THE PRO FIX: Remove fixed heights and let the grid handle it */
+    height: auto; 
+    min-height: 450px; /* Ensures all cards are even but not overly tall */
+}
+
+.award-card:hover {
+    transform: translateY(-10px);
+    background: rgba(255, 255, 255, 0.04);
+}
+
+/* Unique Gold Theme for Oscar Winners */
+.award-card.winner {
+    background: linear-gradient(145deg, #111, #1e180a);
+    border: 1px solid rgba(212, 175, 55, 0.3);
+}
+
+.award-card.winner:hover {
+    border-color: #d4af37;
+    box-shadow: 0 20px 40px rgba(212, 175, 55, 0.1);
+    transform: translateY(-12px);
+}
+
+/* Hover for Nominees (Purple/Pink Theme) */
+.award-card:not(.winner):hover {
+    border-color: var(--accent);
+    transform: translateY(-12px);
+}
+
+/* Ensure the poster handles the ribbon correctly */
+.award-poster {
+    position: relative;
+    width: 100%;
+    height: 220px;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-bottom: 25px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.award-poster img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.8s ease;
+}
+
+
+.award-card:hover .award-poster img {
+    transform: scale(1.1);
+}
+
+/* Winner Ribbon - Bottom of Image Overlay */
+.winner-ribbon {
+    position: absolute;
+    bottom: 5px; /* Pinned to the bottom instead of top */
+    right: 15px;   /* Kept on the right side */
+    background: #d4af37; /* The Gold you liked */
+    color: #000;
+    padding: 6px 14px;
+    font-size: 0.7rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    border-radius: 6px; /* The rounded "Tag" look */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+    z-index: 2;
+}
+
+
+/* Vertical Text Content */
+.award-content {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; /* Pushes the description to fill space if needed */
+}
+
+.award-badge {
+    color: var(--accent);
+    font-weight: 800;
+    font-size: 0.75rem;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+}
+
+/* Gold Badge for Winners */
+.award-card.winner .award-badge {
+    color: #d4af37;
+}
+
+.award-content h3 {
+    font-size: 1.5rem;
+    color: #fff;
+    margin-bottom: 5px;
+    /* This ensures long titles don't feel crowded by the ribbon above them */
+    padding-right: 50px; 
+}
+
+.award-meta {
+    color: var(--secondary);
+    font-weight: 700;
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.award-description {
+    font-size: 0.9rem;
+    color: var(--text-gray);
+    line-height: 1.6;
+    margin: 0;
+    
+    /* PRO TIP: Limit the text lines so one card doesn't get way taller than others */
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* Shows only 3 lines of text */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .awards-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* PRO LIST */
+.pro-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.pro-list li {
+    margin-bottom: 12px;
+    padding-left: 25px;
+    position: relative;
+    color: var(--text-gray);
+}
+
+.pro-list li::before {
+    content: "✦";
+    color: var(--accent);
+    position: absolute;
+    left: 0;
+}
+
+/* GENRE SHOWCASE */
+.section-title {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.section-title h2 {
+    font-size: 3rem;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.section-title p {
+    color: var(--text-gray);
+    font-size: 1.1rem;
+}
+
+.detailed-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.guide-card {
+    background: var(--card-bg);
+    padding: 30px;
+    border-radius: 20px;
+    border: 1px solid #222;
+    transition: 0.3s ease;
+}
+
+.guide-card:hover {
+    border-color: var(--accent);
+    transform: translateY(-10px);
+    background: #181818;
+}
+
+.guide-card h4 {
+    color: var(--accent);
+    margin-top: 0;
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+}
+
+.guide-card p {
+    color: #ccc;
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+}
+
+.example {
+    font-size: 0.8rem;
+    color: var(--secondary);
+    font-weight: bold;
+    text-transform: uppercase;
+    border-top: 1px solid #333;
+    padding-top: 10px;
+}
+
+/* AKIHABARA SPECIAL EFFECTS */
+.akihabara-box img {
+    border: 1px solid rgba(155, 92, 255, 0.3);
+    box-shadow: 0 0 30px rgba(155, 92, 255, 0.2);
+    transition: 0.5s ease;
+}
+
+.akihabara-box:hover img {
+    box-shadow: 0 0 50px rgba(255, 79, 216, 0.4);
+    transform: scale(1.02);
+}
+
+.image-caption {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    background: rgba(0, 0, 0, 0.8);
+    color: var(--accent);
+    padding: 10px 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    border-radius: 8px;
+    backdrop-filter: blur(8px);
+    border-right: 4px solid var(--accent);
+}
+
+
+/* --- MUST WATCH SECTION --- */
+.must-watch {
+    padding: 100px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.spotlight-grid {
+    display: grid;
+    /* Clean grid layout */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.spotlight-card {
+    background: var(--card-bg);
+    border-radius: 20px;
+    overflow: hidden;
+    border: 1px solid #222;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    
+    /* FORMATTING FIX: Force card to be a vertical flexbox */
+    display: flex;
+    flex-direction: column;
+    height: 100%; 
+}
+
+.spotlight-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--accent);
+    box-shadow: 0 20px 40px rgba(255, 79, 216, 0.15);
+}
+
+.card-image {
+    position: relative;
+    height: 300px; /* Forces all images to be the same size */
+    width: 100%;
+    overflow: hidden;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Prevents image stretching */
+    transition: transform 0.6s ease;
+}
+
+.card-info {
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.card-info p {
+    font-size: 0.9rem;
+    color: var(--text-gray);
+    line-height: 1.6;
+    margin-bottom: 25px;
+
+    /* Vertical centering */
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+
+.card-info h3 {
+    font-size: 1.25rem;
+    margin-bottom: 12px;
+    color: #fff;
+    font-weight: 700;
+}
+
+
+.genre-tag {
+    font-size: 0.7rem;
+    color: var(--secondary);
+    font-weight: bold;
+    border: 1px solid var(--secondary);
+    padding: 6px 14px;
+    border-radius: 50px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    /* Prevents the tag from stretching */
+    align-self: flex-start; 
+}
+
+
+/* Frieren Glow */
+.frieren-highlight {
+    border: 1px solid rgba(155, 92, 255, 0.4);
+    box-shadow: 0 0 15px rgba(155, 92, 255, 0.1);
+}
+
+/* Grid logic for exactly 5 items */
+@media (min-width: 1400px) {
+    .spotlight-grid {
+        grid-template-columns: repeat(5, 1fr);
+    }
+}
+
+@media (max-width: 1399px) and (min-width: 900px) {
+    .spotlight-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+
+/* FOOTER STYLING */
+.main-footer {
+    background: #0a0a0a;
+    padding: 60px 20px 30px;
+    border-top: 1px solid #222;
+    text-align: center;
+    margin-top: 100px;
+}
+
+.footer-logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+.footer-links {
+    margin-bottom: 40px;
+}
+
+.footer-links a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 0.85rem;
+    opacity: 0.7;
+    transition: 0.3s;
+}
+
+.footer-links a:hover {
+    color: var(--accent);
+    opacity: 1;
+}
+
+.copyright {
+    font-size: 0.8rem;
+    color: #555;
+    border-top: 1px solid #1a1a1a;
+    padding-top: 30px;
+}
+
+.copyright strong {
+    color: var(--secondary);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .info-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .hero-content h1 {
+        font-size: 3rem;
+    }
+
+    .hero-stats {
+        gap: 20px;
+    }
+
+    .reverse {
+        direction: ltr; /* Reset direction on mobile for better flow */
+    }
+}
+
+/* --- UPDATED CINEMATIC & CAPTION STYLES --- */
+
+/* Cinematic Art Effect: Adds a subtle zoom and vignette on hover */
+.cinematic-box {
+    overflow: hidden;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.cinematic-box img {
+    transition: transform 0.8s cubic-bezier(0.25, 1, 0.5, 1), filter 0.5s ease;
+}
+
+.cinematic-box:hover img {
+    transform: scale(1.08); /* Slow, cinematic zoom */
+    filter: brightness(1.1) contrast(1.1);
+}
+
+/* Akihabara & Global Impact Text: Optimized for clarity */
+.image-caption {
+    margin-top: 15px;      /* Space between photo and text */
+    padding: 10px 0;       /* Internal padding */
+    font-size: 0.95rem;    /* Slightly larger for readability */
+    font-weight: 500;
+    color: var(--text-gray);
+    letter-spacing: 0.5px;
+    border-left: 3px solid var(--accent); /* Elegant vertical line */
+    padding-left: 15px;    /* Space after the vertical line */
+    text-align: left;      /* Standard professional alignment */
+}
+
+/* Hover effect for the caption */
+.image-box:hover .image-caption {
+    background: rgba(5, 5, 5, 0.9);
+    border-color: var(--accent);
+    transform: translateY(-5px);
+    transition: all 0.3s ease;
+}
+
+/* --- RE-ORDERED AKIHABARA EFFECTS FOR STABILITY --- */
+
+.akihabara-box img {
+    border: 1px solid rgba(155, 92, 255, 0.3);
+    box-shadow: 0 0 20px rgba(155, 92, 255, 0.15);
+    transition: all 0.6s ease;
+}
+
+.akihabara-box:hover img {
+    box-shadow: 0 0 40px rgba(255, 79, 216, 0.3);
+    border-color: var(--accent);
+}

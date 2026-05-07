@@ -1,0 +1,79 @@
+/* BLURRED PAGE BACKGROUND */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: url("../animePhoto/lists/apothecary/b03.jpg")
+        center / cover no-repeat;
+    filter: blur(25px);
+    transform: scale(1.15);
+    z-index: -1;
+}
+
+/* ================= HERO ================= */
+.hero {
+    position: relative;
+    height: 90vh;
+    background: url("../animePhoto/lists/apothecary/b03.jpg")
+        center / cover no-repeat;
+    overflow: hidden;
+    padding: 40px;
+    /* Smooth Bottom Fade */
+    -webkit-mask-image: linear-gradient(to bottom, black 75%, transparent 100%);
+    mask-image: linear-gradient(to bottom, black 75%, transparent 100%);
+}
+
+/* --- APOTHECARY DIARIES GENRE STYLING --- */
+
+/* Drama - Red Camellia (Palace Tension) */
+.drama {
+    background: rgba(229, 57, 53, 0.15);
+    color: #ef9a9a;
+    border: 1px solid rgba(239, 154, 154, 0.4);
+}
+
+.drama:hover {
+    background: rgba(229, 57, 53, 0.4);
+    box-shadow: 0 0 15px rgba(229, 57, 53, 0.6);
+    color: #fff;
+}
+
+/* Mystery - Imperial Silk (Jinshi's Influence) */
+.mystery {
+    background: rgba(103, 58, 183, 0.15);
+    color: #b39ddb;
+    border: 1px solid rgba(179, 157, 219, 0.4);
+}
+
+.mystery:hover {
+    background: rgba(103, 58, 183, 0.4);
+    box-shadow: 0 0 15px rgba(103, 58, 183, 0.6);
+    color: #fff;
+    cursor: help;
+}
+
+/* Historical - Jade Apothecary (Maomao's Expertise) */
+.historical {
+    background: rgba(0, 150, 136, 0.15);
+    color: #80cbc4;
+    border: 1px solid rgba(128, 203, 196, 0.4);
+}
+
+.historical:hover {
+    background: rgba(0, 150, 136, 0.4);
+    box-shadow: 0 0 15px rgba(0, 150, 136, 0.6);
+    color: #fff;
+}
+
+/* Romance - Blooming Peony */
+.romance {
+    background: rgba(244, 143, 177, 0.15);
+    color: #f48fb1;
+    border: 1px solid rgba(244, 143, 177, 0.4);
+}
+
+.romance:hover {
+    background: rgba(244, 143, 177, 0.4);
+    box-shadow: 0 0 15px rgba(244, 143, 177, 0.6);
+    color: #fff;
+}

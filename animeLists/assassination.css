@@ -1,0 +1,68 @@
+/* BLURRED PAGE BACKGROUND */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: url("../animePhoto/lists/koroSensei/bg02.jpg")
+        center / cover no-repeat;
+    filter: blur(25px);
+    transform: scale(1.15);
+    z-index: -1;
+}
+
+/* ================= HERO ================= */
+.hero {
+    position: relative;
+    height: 90vh;
+    background: url("../animePhoto/lists/koroSensei/bg02.jpg")
+        center / cover no-repeat;
+    overflow: hidden;
+    padding: 40px;
+    /* Smooth Bottom Fade */
+    -webkit-mask-image: linear-gradient(to bottom, black 75%, transparent 100%);
+    mask-image: linear-gradient(to bottom, black 75%, transparent 100%);
+}
+
+/* Action - Crimson Red */
+.action {
+    background: rgba(255, 71, 87, 0.15);
+    color: #ff4757;
+    border-color: rgba(255, 71, 87, 0.5);
+}
+.action:hover {
+    background: rgba(255, 71, 87, 0.3);
+    box-shadow: 0 0 15px rgba(255, 71, 87, 0.4);
+}
+
+/* Comedy - Koro-Sensei Yellow */
+.comedy {
+    background: rgba(255, 211, 42, 0.15);
+    color: #ffd32a;
+    border-color: rgba(255, 211, 42, 0.5);
+}
+.comedy:hover {
+    background: rgba(255, 211, 42, 0.3);
+    box-shadow: 0 0 15px rgba(255, 211, 42, 0.4);
+}
+
+/* Sci-Fi - Cyber Cyan */
+.scifi {
+    background: rgba(0, 210, 211, 0.15);
+    color: #00d2d1;
+    border-color: rgba(0, 210, 211, 0.5);
+}
+.scifi:hover {
+    background: rgba(0, 210, 211, 0.3);
+    box-shadow: 0 0 15px rgba(0, 210, 211, 0.4);
+}
+
+/* School - Deep Slate Blue */
+.school {
+    background: rgba(84, 160, 255, 0.15);
+    color: #54a0ff;
+    border-color: rgba(84, 160, 255, 0.5);
+}
+.school:hover {
+    background: rgba(84, 160, 255, 0.3);
+    box-shadow: 0 0 15px rgba(84, 160, 255, 0.4);
+}

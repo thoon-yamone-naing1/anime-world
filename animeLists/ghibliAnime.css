@@ -1,0 +1,59 @@
+/* Header & Branding */
+.studio-branding {
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid var(--border);
+}
+
+.main-logo-dark {
+    width: 450px;
+    max-width: 85%;
+    filter: invert(1);
+    opacity: 0.9;
+}
+
+.glow-line {
+    width: 100px;
+    height: 2px;
+    background: linear-gradient(90deg, var(--accent), var(--secondary));
+    margin-top: 40px;
+    box-shadow: 0 0 15px var(--accent);
+}
+
+/* Container must be relative for the badge to stick to it */
+.premium-card {
+    position: relative;
+    cursor: default;
+}
+
+/* Make the image look "locked" */
+.premium-card .anime-img {
+    filter: brightness(0.6) saturate(0.8);
+}
+
+/* The Gold Badge Style */
+.premium-badge {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    background: linear-gradient(135deg, #ffd700, #b8860b);
+    color: #000;
+    padding: 3px 10px;
+    border-radius: 4px;
+    font-size: 0.7rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+    z-index: 5;
+}
+
+/* Optional: Add a subtle glow on hover */
+.premium-card:hover {
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.3);
+    transform: translateY(-2px);
+    transition: all 0.3s ease;
+}

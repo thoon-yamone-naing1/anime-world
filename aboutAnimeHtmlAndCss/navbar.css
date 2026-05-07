@@ -1,0 +1,138 @@
+:root {
+  --accent: #ff4fd8;
+  --secondary: #9b5cff;
+}
+
+/* ================= NAVBAR CONTAINER ================= */
+.creative-nav {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.95);
+  backdrop-filter: blur(10px); /* Adds a modern frosted glass feel */
+  padding: 0 2.20rem;          /* Horizontal padding only */
+  height: 70px;                /* Explicit height for a "straight" look */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #222;
+}
+
+.logo {
+  font-size: 1.7rem;
+  font-weight: 800;
+  text-decoration: none;
+  background: linear-gradient(90deg, var(--accent), var(--secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: 0.9px;
+}
+
+/* ================= MENU & LINKS ================= */
+.menu {
+  display: flex;
+  list-style: none;
+  gap: 2rem; /* Increased spacing between links */
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  align-items: center;
+}
+
+.menu li {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.menu a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1.8px;
+  padding: 10px 0;
+  position: relative; /* Base for the lines */
+  transition: color 0.3s ease;
+}
+
+/* ================= DUAL LINE HOVER EFFECT ================= */
+
+/* Top Line */
+.menu a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--accent);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Bottom Line */
+.menu a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--secondary); /* Using secondary color for dual effect */
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.menu a:hover {
+  color: var(--accent);
+}
+
+.menu a:hover::before,
+.menu a:hover::after {
+  transform: scaleX(1);
+}
+
+/* ================= UTILITIES ================= */
+/* Ensure the body doesn't hide behind the sticky nav */
+body {
+  margin-top: 0;
+}
+
+
+/* ================= BACK TO TOP (PRO LOOK) ================= */
+.back-to-top {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #ff4fd8, #9b5cff);
+  box-shadow: 0 10px 25px rgba(255, 79, 216, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  z-index: 999;
+}
+
+/* Chevron icon (CSS only) */
+.back-to-top::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-top: 3px solid #fff;
+  border-left: 3px solid #fff;
+  transform: rotate(45deg);
+  margin-top: 4px;
+}
+
+.back-to-top:hover {
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 0 15px 35px rgba(155, 92, 255, 0.6);
+}

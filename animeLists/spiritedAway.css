@@ -1,0 +1,65 @@
+/* BLURRED PAGE BACKGROUND */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: url("../animePhoto/lists/ghibli/spirited/b05.jpg")
+        center / cover no-repeat;
+    filter: blur(25px);
+    transform: scale(1.15);
+    z-index: -1;
+}
+
+/* ================= HERO ================= */
+.hero {
+    position: relative;
+    height: 90vh;
+    background: url("../animePhoto/lists/ghibli/spirited/b05.jpg")
+        center / cover no-repeat;
+    overflow: hidden;
+    padding: 40px;
+    /* Smooth Bottom Fade */
+    -webkit-mask-image: linear-gradient(to bottom, black 75%, transparent 100%);
+    mask-image: linear-gradient(to bottom, black 75%, transparent 100%);
+}
+
+/* Adventure - Sky Blue */
+.adventure {
+    background: rgba(0, 168, 255, 0.15);
+    color: #00a8ff;
+    border-color: rgba(0, 168, 255, 0.5);
+}
+.adventure:hover {
+    background: rgba(0, 168, 255, 0.3);
+    box-shadow: 0 0 15px rgba(0, 168, 255, 0.4);
+}
+
+/* Fantasy - Emerald Green */
+.fantasy {
+    background: rgba(46, 204, 113, 0.15);
+    color: #2ecc71;
+    border-color: rgba(46, 204, 113, 0.5);
+}
+.fantasy:hover {
+    background: rgba(46, 204, 113, 0.3);
+    box-shadow: 0 0 15px rgba(46, 204, 113, 0.4);
+}
+
+/* Supernatural - Ghostly Spirit Teal */
+.supernatural {
+    background: rgba(50, 255, 126, 0.1);
+    color: #32ff7e;
+    border: 1px solid rgba(50, 255, 126, 0.4);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Supernatural Hover - The "Apparition" Glow */
+.supernatural:hover {
+    background: rgba(50, 255, 126, 0.25);
+    color: #ffffff;
+    box-shadow: 0 0 20px rgba(50, 255, 126, 0.6),
+                0 0 40px rgba(50, 255, 126, 0.2);
+    text-shadow: 0 0 8px #fff;
+    filter: brightness(1.2);
+}

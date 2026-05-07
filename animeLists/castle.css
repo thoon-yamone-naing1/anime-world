@@ -1,0 +1,57 @@
+/* BLURRED PAGE BACKGROUND */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: url("../animePhoto/lists/ghibli/castle/b01.jpeg")
+        center / cover no-repeat;
+    filter: blur(25px);
+    transform: scale(1.15);
+    z-index: -1;
+}
+
+/* ================= HERO ================= */
+.hero {
+    position: relative;
+    height: 90vh;
+    background: url("../animePhoto/lists/ghibli/castle/b01.jpeg")
+        center / cover no-repeat;
+    overflow: hidden;
+    padding: 40px;
+    /* Smooth Bottom Fade */
+    -webkit-mask-image: linear-gradient(to bottom, black 75%, transparent 100%);
+    mask-image: linear-gradient(to bottom, black 75%, transparent 100%);
+}
+
+/* Adventure - Sky Blue */
+.adventure {
+    background: rgba(0, 168, 255, 0.15);
+    color: #00a8ff;
+    border-color: rgba(0, 168, 255, 0.5);
+}
+.adventure:hover {
+    background: rgba(0, 168, 255, 0.3);
+    box-shadow: 0 0 15px rgba(0, 168, 255, 0.4);
+}
+
+/* Fantasy - Emerald Green */
+.fantasy {
+    background: rgba(46, 204, 113, 0.15);
+    color: #2ecc71;
+    border-color: rgba(46, 204, 113, 0.5);
+}
+.fantasy:hover {
+    background: rgba(46, 204, 113, 0.3);
+    box-shadow: 0 0 15px rgba(46, 204, 113, 0.4);
+}
+
+/* Sci-Fi - Levitation Crystal Gold */
+.scifi {
+    background: rgba(241, 196, 15, 0.15);
+    color: #f1c40f;
+    border-color: rgba(241, 196, 15, 0.5);
+}
+.scifi:hover {
+    background: rgba(241, 196, 15, 0.3);
+    box-shadow: 0 0 15px rgba(241, 196, 15, 0.4);
+}

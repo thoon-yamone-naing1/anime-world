@@ -1,0 +1,79 @@
+/* 1. This creates the blur BEHIND everything */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: url("../animePhoto/lists/5centimeter/bg01.jpg") center / cover no-repeat;
+    filter: blur(25px);
+    transform: scale(1.15);
+    z-index: -1; /* Pushes the blur to the very back */
+}
+
+/* 2. This keeps the Hero SHARP */
+.hero {
+    position: relative;
+    z-index: 1; /* Lifts the hero in front of the blur */
+    filter: none !important; /* Forces the hero to stay clear */
+    
+    height: 90vh;
+    background: url("../animePhoto/lists/5centimeter/bg01.jpg") center / cover no-repeat;
+    overflow: hidden;
+    padding: 40px;
+    
+    /* Smooth Bottom Fade */
+    -webkit-mask-image: linear-gradient(to bottom, black 75%, transparent 100%);
+    mask-image: linear-gradient(to bottom, black 75%, transparent 100%);
+}
+
+
+
+
+/* Specific Genre Colors */
+.romance {
+    background: rgba(255, 79, 216, 0.15);
+    color: #ff66d8;
+    border-color: rgba(255, 79, 216, 0.5);
+}
+
+.drama {
+    background: rgba(255, 165, 0, 0.15);
+    color: #ffb347;
+    border-color: rgba(255, 165, 0, 0.5);
+}
+
+
+
+/* Romance Hover (Pink Glow) */
+.romance:hover {
+    background: rgba(255, 79, 216, 0.3);
+    box-shadow: 0 0 15px rgba(255, 79, 216, 0.4);
+    transform: translateY(-2px);
+}
+
+/* Drama Hover (Orange Glow) */
+.drama:hover {
+    background: rgba(255, 165, 0, 0.3);
+    box-shadow: 0 0 15px rgba(255, 165, 0, 0.4);
+    transform: translateY(-2px);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,74 @@
+/* BLURRED PAGE BACKGROUND */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: url("../animePhoto/lists/yokkaiSensei/bg01.jpg")
+        center / cover no-repeat;
+    filter: blur(25px);
+    transform: scale(1.15);
+    z-index: -1;
+}
+
+/* ================= HERO ================= */
+.hero {
+    position: relative;
+    height: 90vh;
+    background: url("../animePhoto/lists/yokkaiSensei/bg01.jpg")
+        center / cover no-repeat;
+    overflow: hidden;
+    padding: 40px;
+    /* Smooth Bottom Fade */
+    -webkit-mask-image: linear-gradient(to bottom, black 75%, transparent 100%);
+    mask-image: linear-gradient(to bottom, black 75%, transparent 100%);
+}
+
+.back-key{
+    color: rgb(255, 255, 255);
+}
+
+
+.meta {
+    margin-top: 6px;
+    opacity: 1; /* Increased from 0.85 to 1 for better visibility */
+    
+    /* This creates a soft dark glow behind the text */
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8), 
+                 0px 0px 10px rgba(0, 0, 0, 0.5);
+    
+    /* Ensures the font stays crisp */
+    font-weight: 400; 
+}
+
+/* Comedy - Bright Yellow */
+.comedy {
+    background: rgba(255, 234, 0, 0.15);
+    color: #ffea00;
+    border-color: rgba(255, 234, 0, 0.5);
+}
+.comedy:hover {
+    background: rgba(255, 234, 0, 0.3);
+    box-shadow: 0 0 15px rgba(255, 234, 0, 0.4);
+}
+
+/* Supernatural - Ghostly Purple */
+.supernatural {
+    background: rgba(162, 155, 254, 0.15);
+    color: #a29bfe;
+    border-color: rgba(162, 155, 254, 0.5);
+}
+.supernatural:hover {
+    background: rgba(162, 155, 254, 0.3);
+    box-shadow: 0 0 15px rgba(162, 155, 254, 0.4);
+}
+
+/* School - Cool Blue */
+.school {
+    background: rgba(116, 185, 255, 0.15);
+    color: #74b9ff;
+    border-color: rgba(116, 185, 255, 0.5);
+}
+.school:hover {
+    background: rgba(116, 185, 255, 0.3);
+    box-shadow: 0 0 15px rgba(116, 185, 255, 0.4);
+}

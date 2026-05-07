@@ -1,0 +1,84 @@
+/* BLURRED PAGE BACKGROUND */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: url("../animePhoto/lists/april/bg03.jpg")
+        center / cover no-repeat;
+    filter: blur(25px);
+    transform: scale(1.15);
+    z-index: -1;
+}
+
+/* ================= HERO ================= */
+.hero {
+    position: relative;
+    height: 90vh;
+    background: url("../animePhoto/lists/april/bg03.jpg")
+        center / cover no-repeat;
+    overflow: hidden;
+    padding: 40px;
+    /* Smooth Bottom Fade */
+    -webkit-mask-image: linear-gradient(to bottom, black 75%, transparent 100%);
+    mask-image: linear-gradient(to bottom, black 75%, transparent 100%);
+}
+
+/* Specific Genre Colors */
+.romance {
+    background: rgba(255, 79, 216, 0.15);
+    color: #ff66d8;
+    border-color: rgba(255, 79, 216, 0.5);
+}
+
+/* Romance Hover (Pink Glow) */
+.romance:hover {
+    background: rgba(255, 79, 216, 0.3);
+    box-shadow: 0 0 15px rgba(255, 79, 216, 0.4);
+    transform: translateY(-2px);
+}
+
+
+.drama {
+    background: rgba(255, 165, 0, 0.15);
+    color: #ffb347;
+    border-color: rgba(255, 165, 0, 0.5);
+}
+
+/* Drama Hover (Orange Glow) */
+.drama:hover {
+    background: rgba(255, 165, 0, 0.3);
+    box-shadow: 0 0 15px rgba(255, 165, 0, 0.4);
+    transform: translateY(-2px);
+}
+
+/* Slice of Life - Rainwater Teal */
+.slice-of-life {
+    background: rgba(123, 237, 159, 0.15); /* Soft minty teal */
+    color: #7bed9f; /* Bright but calming green-teal */
+    border-color: rgba(123, 237, 159, 0.5);
+}
+
+/* Slice of Life Hover (Teal Glow) */
+.slice-of-life:hover {
+    background: rgba(123, 237, 159, 0.3);
+    box-shadow: 0 0 15px rgba(123, 237, 159, 0.4);
+    transform: translateY(-2px);
+}
+
+/* Music - Violin Gold */
+.music {
+    background: rgba(249, 202, 36, 0.15); /* Soft golden tint */
+    color: #f9ca24; /* Bright instrument gold */
+    border-color: rgba(249, 202, 36, 0.5);
+}
+
+/* Music Hover - The "Melody" Effect */
+.music:hover {
+    background: rgba(249, 202, 36, 0.3);
+    color: #ffffff;
+    box-shadow: 0 0 20px rgba(249, 202, 36, 0.5);
+    
+    /* Slight rotation and lift to make it feel rhythmic */
+    transform: translateY(-4px) rotate(-2deg);
+}
+

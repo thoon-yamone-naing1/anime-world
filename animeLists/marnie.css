@@ -1,0 +1,72 @@
+/* BLURRED PAGE BACKGROUND */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: url("../animePhoto/lists/ghibli/marnie/bg01.jpg")
+        center / cover no-repeat;
+    filter: blur(25px);
+    transform: scale(1.15);
+    z-index: -1;
+}
+
+/* ================= HERO ================= */
+.hero {
+    position: relative;
+    height: 90vh;
+    background: url("../animePhoto/lists/ghibli/marnie/bg01.jpg")
+        center / cover no-repeat;
+    overflow: hidden;
+    padding: 40px;
+    /* Smooth Bottom Fade */
+    -webkit-mask-image: linear-gradient(to bottom, black 75%, transparent 100%);
+    mask-image: linear-gradient(to bottom, black 75%, transparent 100%);
+}
+
+/* Specific Genre Colors */
+.romance {
+    background: rgba(255, 79, 216, 0.15);
+    color: #ff66d8;
+    border-color: rgba(255, 79, 216, 0.5);
+}
+
+/* Romance Hover (Pink Glow) */
+.romance:hover {
+    background: rgba(255, 79, 216, 0.3);
+    box-shadow: 0 0 15px rgba(255, 79, 216, 0.4);
+    transform: translateY(-2px);
+}
+
+/* Mystery - Deep Indigo & Marsh Mist */
+.mystery {
+    background: rgba(48, 51, 107, 0.2);
+    color: #bebeeb;
+    border: 1px solid rgba(190, 190, 235, 0.3);
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    letter-spacing: 1.5px;
+}
+
+/* Mystery Hover - The "Marsh House Window" Glow */
+.mystery:hover {
+    background: rgba(48, 51, 107, 0.5);
+    color: #ffffff;
+    border-color: #f0932b; /* A faint golden glow like a candle in a window */
+    box-shadow: 0 0 15px rgba(48, 51, 107, 0.8), 
+                0 0 30px rgba(240, 147, 43, 0.3);
+    filter: saturate(1.2);
+    cursor: help; /* Changes the cursor to a question mark for extra mystery */
+}
+
+/* Slice of Life - Rainwater Teal */
+.slice-of-life {
+    background: rgba(123, 237, 159, 0.15); /* Soft minty teal */
+    color: #7bed9f; /* Bright but calming green-teal */
+    border-color: rgba(123, 237, 159, 0.5);
+}
+
+/* Slice of Life Hover (Teal Glow) */
+.slice-of-life:hover {
+    background: rgba(123, 237, 159, 0.3);
+    box-shadow: 0 0 15px rgba(123, 237, 159, 0.4);
+    transform: translateY(-2px);
+}

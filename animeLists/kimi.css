@@ -1,0 +1,68 @@
+/* BLURRED PAGE BACKGROUND */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: url("../animePhoto/lists/kimi/b01.jpg")
+        center / cover no-repeat;
+    filter: blur(25px);
+    transform: scale(1.15);
+    z-index: -1;
+}
+
+/* ================= HERO ================= */
+.hero {
+    position: relative;
+    height: 90vh;
+    background: url("../animePhoto/lists/kimi/b01.jpg")
+        center / cover no-repeat;
+    overflow: hidden;
+    padding: 40px;
+    /* Smooth Bottom Fade */
+    -webkit-mask-image: linear-gradient(to bottom, black 75%, transparent 100%);
+    mask-image: linear-gradient(to bottom, black 75%, transparent 100%);
+}
+/* --- GENRE BADGES --- */
+
+/* Romance - Cherry Blossom Pink */
+.romance {
+    background: rgba(255, 183, 197, 0.15);
+    color: #ffb7c5;
+    border: 1px solid rgba(255, 183, 197, 0.4);
+}
+
+.romance:hover {
+    background: rgba(255, 183, 197, 0.3);
+    box-shadow: 0 0 15px rgba(255, 183, 197, 0.6);
+    color: #fff;
+    text-shadow: 0 0 5px #ffb7c5;
+}
+
+/* Slice of Life - Warm Sunshine Yellow */
+.slice-of-life {
+    background: rgba(254, 211, 48, 0.1);
+    color: #fed330;
+    border: 1px solid rgba(254, 211, 48, 0.3);
+}
+
+.slice-of-life:hover {
+    background: rgba(254, 211, 48, 0.25);
+    box-shadow: 0 0 15px rgba(254, 211, 48, 0.5);
+    color: #fff;
+}
+
+/* School - Ink Blue (Like a fountain pen) */
+.school {
+    background: rgba(75, 123, 236, 0.1);
+    color: #4b7bec;
+    border: 1px solid rgba(75, 123, 236, 0.3);
+    position: relative;
+}
+
+.school:hover {
+    background: rgba(75, 123, 236, 0.2);
+    border-style: dashed; /* Looks like a notebook outline */
+    transform: rotate(-2deg); /* Casual "hand-drawn" tilt */
+    color: #fff;
+    box-shadow: 0 0 12px rgba(75, 123, 236, 0.4);
+}
